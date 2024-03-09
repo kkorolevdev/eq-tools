@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInterval(countdown);
             countdown = null;
             startBtn.textContent = "Start";
+            startBtn.style.display = "inline-block"; // Show the start button
             timeLeft = timerDuration;
             timerDisplay.classList.remove("attention", "warning", "complete");
             displayTimeLeft(timerDisplay, timerDuration);
@@ -52,16 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     timerDisplay.classList.remove("attention", "warning");
                     if (timeLeft === 0) {
                         timerDisplay.classList.add("complete");
+                        startBtn.style.display = "none"; // Hide the start button
                     }
                     displayTimeLeft(timerDisplay, timeLeft);
                 } else {
                     displayTimeLeft(timerDisplay, timeLeft);
                     updateTimerClasses();
                 }
-                if (timeLeft < -timerDuration) {
+                if (timeLeft <= -timerDuration) {
                     clearInterval(countdown);
                     countdown = null;
-                    startBtn.textContent = "Start";
                 }
             }, 1000);
         }
@@ -88,12 +89,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-	function displayTimeLeft(timerDisplay, seconds) {
-		const absSeconds = Math.abs(seconds);
-		const hours = Math.floor(absSeconds / 3600);
-		const minutes = Math.floor((absSeconds % 3600) / 60);
-		const remainingSeconds = absSeconds % 60;
-		const display = `${seconds < 0 ? '-' : ''}${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-		timerDisplay.textContent = display;
-	}
+    function displayTimeLeft(timerDisplay, seconds) {
+        const absSeconds = Math.abs(seconds);
+        const hours = Math.floor(absSeconds / 3600);
+        const minutes = Math.floor((absSeconds % 3600) / 60);
+        const remainingSeconds = absSeconds % 60;
+        const display = `${seconds < 0 ? '-' : ''}${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+        timerDisplay.textContent = display;
+    }
 });
