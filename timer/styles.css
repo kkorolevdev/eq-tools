@@ -132,6 +132,10 @@ button:active {
 	border-bottom: 1px solid #e1e1e1;
 }
 
+.eq-timer__group-info input {
+	display: none;
+}
+
 .eq-timer__group-label h3 {
 	margin: 0;
 }

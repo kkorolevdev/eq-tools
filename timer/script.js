@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     timerContainers.forEach(container => {
         const startBtn = container.querySelector(".eq-timer__start");
         const resetBtn = container.querySelector(".eq-timer__reset");
+        const editBtn = container.querySelector(".eq-timer__group-label-edit");
+        const label = container.querySelector(".eq-timer__group-label h3");
+        const input = container.querySelector("input");
         const timerDisplay = container.querySelector(".timer");
         let countdown;
         let timeLeft = 0;
@@ -42,6 +45,20 @@ document.addEventListener("DOMContentLoaded", () => {
             timeLeft = timerDuration;
             timerDisplay.classList.remove("attention", "warning", "complete");
             displayTimeLeft(timerDisplay, timerDuration);
+        });
+
+        editBtn.addEventListener("click", () => {
+            if (editBtn.textContent === "Edit") {
+                label.style.display = "none";
+                input.style.display = "inline-block";
+                input.value = label.textContent.trim();
+                editBtn.textContent = "Save";
+            } else {
+                label.textContent = input.value.trim();
+                label.style.display = "inline-block";
+                input.style.display = "none";
+                editBtn.textContent = "Edit";
+            }
         });
 
         function startTimer() {
