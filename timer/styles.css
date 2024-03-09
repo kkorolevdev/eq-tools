@@ -146,5 +146,19 @@ button:active {
 .eq-timer__group-timer .timer {
 	padding: 0.5rem 1rem;
 	background: #ffffff;
+	color: #000000;
 	border-radius: 4px;
+}
+
+.eq-timer__group-timer .timer.attention {
+	background: #ffffaa;
+}
+
+.eq-timer__group-timer .timer.warning {
+	background: #ff0000;
+	color: #ffffff;
+}
+
+.eq-timer__group-timer .timer.complete {
+	background: #aaaaff;
 }
