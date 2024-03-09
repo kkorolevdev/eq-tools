@@ -160,5 +160,6 @@ button:active {
 }
 
 .eq-timer__group-timer .timer.complete {
-	background: #aaaaff;
+	background: #e1e1e1;
+	color: #474747;
 }
