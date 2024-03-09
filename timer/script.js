@@ -49,14 +49,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 const secondsElapsed = Math.floor((Date.now() - startTime) / 1000);
                 timeLeft = timerDuration - secondsElapsed;
                 if (timeLeft <= 0) {
-                    clearInterval(countdown);
-                    timerDisplay.textContent = "00:00:00";
-                    startBtn.textContent = "Start";
                     timerDisplay.classList.remove("attention", "warning");
-                    timerDisplay.classList.add("complete");
+                    if (timeLeft === 0) {
+                        timerDisplay.classList.add("complete");
+                    }
+                    displayTimeLeft(timerDisplay, timeLeft);
                 } else {
                     displayTimeLeft(timerDisplay, timeLeft);
                     updateTimerClasses();
+                }
+                if (timeLeft < -timerDuration) {
+                    clearInterval(countdown);
+                    countdown = null;
+                    startBtn.textContent = "Start";
                 }
             }, 1000);
         }
@@ -83,11 +88,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    function displayTimeLeft(timerDisplay, seconds) {
-        const hours = Math.floor(seconds / 3600);
-        const minutes = Math.floor((seconds % 3600) / 60);
-        const remainingSeconds = seconds % 60;
-        const display = `${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
-        timerDisplay.textContent = display;
-    }
+	function displayTimeLeft(timerDisplay, seconds) {
+		const absSeconds = Math.abs(seconds);
+		const hours = Math.floor(absSeconds / 3600);
+		const minutes = Math.floor((absSeconds % 3600) / 60);
+		const remainingSeconds = absSeconds % 60;
+		const display = `${seconds < 0 ? '-' : ''}${hours < 10 ? '0' : ''}${hours}:${minutes < 10 ? '0' : ''}${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
+		timerDisplay.textContent = display;
+	}
 });
