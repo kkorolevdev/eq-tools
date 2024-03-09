@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EQ Timer</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="eq-timer">
+		<div class="eq-timer__header">
+			<h1>EQ Timer</h1>
+		</div>
+		<div class="eq-timer__content">
+			<div class="eq-timer__settings">
+				<h2>Zone respawn time</h2>
+				<input type="number" id="zoneRespMin" placeholder="Minutes">
+				<input type="number" id="zoneRespSec" placeholder="Seconds">
+				<button id="setTimeBtn">Set Time</button>
+			</div>
+			<div class="eq-timer__grid">
+
+				<div class="eq-timer__group" id="eq-timer-1">
+					<div class="eq-timer__group-info">
+						<div class="eq-timer__group-label">
+							<h3>Timer 1</h3>
+						</div>
+						<button class="eq-timer__group-label-edit">Edit</button>
+					</div>
+					<div class="eq-timer__group-timer">
+						<div class="timer">00:00:00</div>
+						<div class="controls">
+							<button class="eq-timer__start">Start</button>
+							<button class="eq-timer__reset">Reset</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="eq-timer__group" id="eq-timer-2">
+					<div class="eq-timer__group-info">
+						<div class="eq-timer__group-label">
+							<h3>Timer 2</h3>
+						</div>
+						<button class="eq-timer__group-label-edit">Edit</button>
+					</div>
+					<div class="eq-timer__group-timer">
+						<div class="timer">00:00:00</div>
+						<div class="controls">
+							<button class="eq-timer__start">Start</button>
+							<button class="eq-timer__reset">Reset</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	<script src="script.js"></script>
+</body>
+</html>

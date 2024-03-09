@@ -1,0 +1,150 @@
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+
+.container {
+	padding: 20px;
+}
+
+.top-section {
+	margin-bottom: 20px;
+}
+
+input[type="number"] {
+	font-size: 16px;
+	padding: 8px;
+	margin-right: 10px;
+}
+
+input[type="text"] {
+	font-size: 16px;
+	padding: 8px;
+	margin-right: 10px;
+}
+
+button {
+	font-size: 16px;
+	padding: 10px 20px;
+	margin: 0 5px;
+	cursor: pointer;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 4px;
+}
+
+button:hover {
+	background-color: #45a049;
+}
+
+button:active {
+	background-color: #398438;
+}
+
+.timer-group {
+	display: inline-block;
+	text-align: left;
+}
+
+.timer-info {
+	display: flex;
+	align-items: center;
+}
+
+.timer-name {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.timer-controls {
+	display: flex;
+	align-items: center;
+}
+
+.timer-box {
+	padding: 8px 16px;
+	background-color: #f2f2f2;
+	border-radius: 4px;
+}
+
+.timer {
+	font-size: 36px;
+}
+
+.controls {
+	margin-left: 10px;
+}
+
+.label-input {
+	display: none;
+	margin-top: 10px;
+}
+
+.eq-timer {
+	width: 100%;
+	max-width: 924px;
+	margin: 0 auto;
+}
+
+.eq-timer__header {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.eq-timer__header h1 {
+	margin: 0;
+}
+
+.eq-timer__settings {
+	margin-bottom: 2rem;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.eq-timer__grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 1.5rem;
+	row-gap: 1.5rem;
+}
+
+.eq-timer__group {
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 1.5rem;
+	border-radius: 4px;
+	background: #f1f1f1;
+}
+
+.eq-timer__group-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #e1e1e1;
+}
+
+.eq-timer__group-label h3 {
+	margin: 0;
+}
+
+.eq-timer__group-timer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.eq-timer__group-timer .timer {
+	padding: 0.5rem 1rem;
+	background: #ffffff;
+	border-radius: 4px;
+}
