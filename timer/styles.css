@@ -1,6 +1,8 @@
 body {
 	font-family: Arial, sans-serif;
 	text-align: center;
+	background: #232323;
+	color: #e1e1e1;
 }
 
 .container {
@@ -25,7 +27,9 @@ input[type="text"] {
 	padding: 8px;
 	font-size: 16px;
 	outline: none;
-	border: 1px solid #e1e1e1;
+	color: #e1e1e1;
+	background: #555555;
+	border: 1px solid #787878;
 	border-radius: 4px;
 	transition: 0.25s;
 }
@@ -106,7 +110,7 @@ button:active {
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 	padding-bottom: 2rem;
-	border-bottom: 1px solid #e1e1e1;
+	border-bottom: 1px solid #585858;
 }
 
 .eq-timer__header h1 {
@@ -116,7 +120,7 @@ button:active {
 .eq-timer__settings {
 	margin-bottom: 2rem;
 	padding-bottom: 2rem;
-	border-bottom: 1px solid #e1e1e1;
+	border-bottom: 1px solid #585858;
 }
 
 .eq-timer__grid {
@@ -132,7 +136,7 @@ button:active {
 	margin: 0 auto;
 	padding: 0 1.5rem 1.5rem 1.5rem;
 	border-radius: 4px;
-	background: #f1f1f1;
+	background: #343434;
 }
 
 .eq-timer__group-info {
@@ -152,16 +156,17 @@ button:active {
 	font-size: 14px;
 	padding: 0;
 	background-color: transparent;
-	color: #474747;
+	color: #c1c1c1;
 }
 
 .eq-timer__group-label-edit:hover {
 	background-color: transparent;
-	color: #000000;
+	color: #e1e1e1;
 }
 
 .eq-timer__group-label h3 {
 	margin: 0;
+	color: #c1c1c1;
 }
 
 .eq-timer__group-timer {
@@ -173,8 +178,8 @@ button:active {
 
 .eq-timer__group-timer .timer {
 	padding: 0.5rem 1rem;
-	background: #ffffff;
-	color: #000000;
+	background: #555555;
+	color: #c1c1c1;
 	border-radius: 4px;
 }
 
