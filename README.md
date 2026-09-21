@@ -252,17 +252,6 @@ It is not affiliated with, endorsed by, or sponsored by Daybreak Game Company or
 
 EverQuest and related names and trademarks belong to their respective owners.
 
-## License
-
-Add your preferred license here.
-
-For example, if you want to release the project under the MIT License:
-
-```text
-MIT License
-```
-
-See the `LICENSE` file for the complete license text.
 
 ## Contributing
 
